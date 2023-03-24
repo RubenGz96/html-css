@@ -9,9 +9,15 @@
 <body>
     <!-- Esto sirve para el posicionamiento del buscador
     El encabezado h1 es mas importante que el h2, etc -->
+    <div dir="rtl">DIV -  dir="rtl"</div>
+    <div align="center">DIV -  align="center"</div>
     <h1>HEADER - Encabezado h1</h1>
     <h6>HEADER - Encabezado h6</h6>
-    <p> PARAGRAPH - Parrafos</p>
+	<a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements"> más sobre etiqueta H</a>
+    <p dir="rtl" > PARAGRAPH - Parrafos</p>
+    <p align="center" > PARAGRAPH - Parrafos</p>
+	<a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/Heading_Elements"> más sobre etiqueta P</a>
+
 	<a href="https://google.com"> ANCHOR - Enlace</a>
 
 
@@ -39,10 +45,39 @@
     <span>Este es un SPAN</span><br>
     <hr>
     <h3>Formulario</h3>
-    <form>
+    <form action="ejercicios/ejercicio_2.html">
+        <fieldset>
+            <legend>Texto Leyenda del formulario</legend>
+            <h2>Grupo de Inputs</h2>
+            <div>
+                <!-- 
+                    for = define el ID del label y sirve 
+                    para ser foco del input con el mismo ID
+                -->
+                <label for="texto">Texto</label>
+                <input id="texto" name="texto" disabled="true" /><br>
+            </div>
+            <div>
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios"></textarea><br>
+            </div>
+            <button>Enviar</button>
+            <button type="reset"></button>
+        </fieldset>
+    </form>
+    <!-- 
+        action: accion del formulario 
+        method: GET por default
+        id: en los inputs es obligatorio para enviar parametros
+        type button: submit por default
+    -->
+    <form action="ejercicios/ejercicio_1.html">
         <fieldset>
             <legend>Grupo de Inputs</legend>
-            <label>Texto</label><input type="text" placeholder="Escribe tu nombre" /><br>
+            <div>
+                <label for="texto">Texto</label>
+                <input id="texto" type="text" placeholder="Escribe tu nombre" /><br>
+            </div>
             <label>Email</label><input type="email" required/><br>
             <label>Numero</label><input type="number" /><br>
             <label>Contraseña</label><input type="password" /><br>
@@ -62,6 +97,10 @@
     <img alt="" src="https://placekitten.com/200/300" />
     <hr>
     <h3>Tablas</h3>
+    <!-- 
+        th - Table Heading
+        td - Table Data
+     -->
     <table border="1">
         <caption>Cabecera</caption>
         <tr>
